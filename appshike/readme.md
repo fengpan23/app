@@ -644,19 +644,7 @@ function hideTip(){
 		        });
 		}else{
 			$.ajax({
-		        type : "post",
-		        url : "/shike/user_click_record",
-		        data : {appid:appid,user_id:user_id,order_Id:order_id,type:"app"},
-		        dataType: 'text',
-		        async : false,
-		        success : function(num){
-		        	if(num=="-1"){
-		        		$('#played_msg').html('<p>哎呀~已经被抢光了!等等看吧</p>');
-		        		$(".msg_played").show();
-		        	}else{
-		        		location.href = getwxurl(detail_url+"?ds="+doingStatus);
-		        	}
-		        }
+
 		    });
 		}
 
@@ -703,3 +691,7 @@ function hideTip(){
   'content-language': 'zh-CN' }
 
 Process finished with exit code 0
+
+
+
+　
