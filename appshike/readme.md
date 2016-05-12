@@ -690,7 +690,16 @@ function hideTip(){
   'set-cookie': [ 'JSESSIONID=C4893558E2C0951E787148B6C8339E8C; Path=/; HttpOnly' ],
   'content-language': 'zh-CN' }
 
-Process finished with exit code 0
+抢到了的
+type_name: '图书',
+status: '0',
+ranking: 3,
+limit_flg: 0,
+
+type_name: '游戏',
+status: '8',
+ranking: 1,
+limit_flg: 1,
 
 
 

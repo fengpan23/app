@@ -25,7 +25,11 @@ class Req{
                 result += data;
             }).on('end', function() {
                 if(result){
-                    me.emit(name, JSON.parse(result));
+                    let res;
+                    try{
+                        res = JSON.parse(result)
+                    }catch(e){console.error('error: ', e, ' result: ', result)}
+                    me.emit(name, res);
                 }
             });
         }

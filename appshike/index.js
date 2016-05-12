@@ -35,7 +35,12 @@ function clickRecord(appid, oid){
     let opt = {
         hostname: 'i.appshike.com',
         path: '/shike/user_click_record',
-        method: "POST"
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13E238 Safari/601.1',
+            'Cookie': 'IORI="aZIInp/V1n511KTgIkh63mmFNWXmofqW9gqnfSgIPgzkG40ZbPZkpGtgUTsS8Pimm0WWwyKGL0D1tnjPh8jX/oa9z/vdhPDN64uc9CbOZ5k="; JSESSIONID=8DBD0FF13CF203DEBE7817FEF90BEE8C; OD=aZIInp/V1n511KTgIkh63mmFNWXmofqW9gqnfSgIPgxS36fT4wtomhJfcU/fpId7; OIL=bT7bRcUJoewMEn8bBtYri99pw7S63INRBE4r%2BzbHY9%2BLmp4r%2B7Pp%2Bu0uwtGmijrkV29tTFk8chNx3pfrbN7n5w%3D%3D; aliyungf_tc=AQAAAKg7EHnw4AkAFPOUPc1TRfK39MCO',
+        }
     };
     let data = {
         appid: appid,
@@ -44,6 +49,8 @@ function clickRecord(appid, oid){
         user_id: user_id
     };
 
+    console.log('record data: ', data);
+
     let re = http.request(opt, function(res){
         let result = '';
         res.on('data', function(chunk){
@@ -51,7 +58,7 @@ function clickRecord(appid, oid){
         });
         res.on('end', function() {
             //result === -1  被抢光
-            console.log('result: ', result);
+            console.error('result: ', result);
         });
     });
     re.write(querystring.stringify(data));
@@ -81,6 +88,8 @@ function applist(timeout, complete){
         lists.forEach(function (item) {
             console.log('name: ', item.search_word);
             if(item.order_status_disp > 0){
+                //TODO: record time
+                console.log('share app time: ', new Date());
                 clickRecord(item.appid, item.order_id);
             }
         });
