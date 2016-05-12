@@ -1,21 +1,3 @@
-	GET /services/subtasks.getList HTTP/1.1
-Host	qianka.com
-Access-Control-Allow-Origin	*
-Accept	*/*
-X-QK-TIME	1462978542
-X-QK-SCHEME	com.heijiaoyinyue.app
-X-QK-SIGN	6F2EE1D1C5BDB3967DE1786EAE6F8A5B
-Access-Control-Allow-Headers	X-Qk-Auth, *
-X-QK-APPV	iPhone8,1|1280.250000|com.heijiaoyinyue.app|3.0.2016040701
-Accept-Language	zh-cn
-Accept-Encoding	gzip, deflate
-Origin	http://qianka.com
-X-QK-API-KEY	c26007f41f472932454ea80deabd612c
-Connection	keep-alive
-User-Agent	Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13E238 Safari/601.1
-Referer	http://qianka.com/qk/dashboard?from=webclip
-X-QK-AUTH	4013E176-3F4D-4864-9B1A-2B9BEBABF0AD|b9b1ad8f-feb4-495f-bf48-0b1b1d8ff57c|7394422535187494
-
 {
 	"status": "ok",
 	"payload": {
