@@ -1,206 +1,3 @@
-{
-	"status": "ok",
-	"payload": {
-		"subtasks": [{
-			"bid": "com.wemomo.game.ttmwy",
-			"status_for_order": 3,
-			"title": "\u751c\u751c\u840c\u7269\u8bed",
-			"reward": 1.5,
-			"tags": [1, 0, 1],
-			"status": 1,
-			"type": 1,
-			"id": 135849,
-			"zs_reward": 0.2,
-			"icon": "http://upload.guo7.com/df3c02ab89a09c69171d66372628e674.jpg",
-			"qty": 0
-		}, {
-			"bid": "com.sohu.newspaper",
-			"status_for_order": 5,
-			"title": "\u641c\u72d0\u65b0\u95fb",
-			"reward": 1.5,
-			"tags": [1, 0, 1],
-			"status": 3,
-			"type": 1,
-			"id": 135772,
-			"zs_reward": 0.2,
-			"icon": "http://upload.guo7.com/c88c40358c9940f46c6e2fd64d934039.jpg",
-			"qty": 0
-		}, {
-			"bid": "com.anjuke.anjuke",
-			"status_for_order": 5,
-			"title": "\u5b89\u5c45\u5ba2-\u627e\u4e8c\u624b\u623f\u65b0\u623f\u79df\u623f",
-			"reward": 1.5,
-			"tags": [1, 0, 0],
-			"status": 3,
-			"type": 1,
-			"id": 135784,
-			"zs_reward": 0.0,
-			"icon": "http://upload.guo7.com/b0e07a729a535cc27b0c55b4d9e51bba.jpg",
-			"qty": 0
-		}, {
-			"bid": "com.qunar.iphoneclient8",
-			"status_for_order": 5,
-			"title": "\u53bb\u54ea\u513f\u65c5\u884c",
-			"reward": 1.5,
-			"tags": [1, 0, 1],
-			"status": 3,
-			"type": 1,
-			"id": 135660,
-			"zs_reward": 0.2,
-			"icon": "http://upload.guo7.com/7f12a808c2836bfa2c1a7f5e525a0bb3.jpg",
-			"qty": 3409             剩余量
-		}, {
-			"bid": "com.360buy.jdmobile",
-			"status_for_order": 5,
-			"title": "\u4eac\u4e1c",
-			"reward": 1.5,
-			"tags": [1, 0, 1],
-			"status": 3,
-			"type": 1,
-			"id": 135770,
-			"zs_reward": 0.2,
-			"icon": "http://upload.guo7.com/11741b089078c0e7235da2947dcdc973.jpg",
-			"qty": 3781
-		}, {
-			"bid": "ctrip.com",
-			"status_for_order": 5,
-			"title": "\u643a\u7a0b\u65c5\u884c",
-			"reward": 1.5,
-			"tags": [1, 0, 0],
-			"status": 3,
-			"type": 1,
-			"id": 135242,
-			"zs_reward": 0.0,
-			"icon": "http://upload.guo7.com/5a8a16f28671ccd5f5119ff98b818615.jpg",
-			"qty": 15985
-		}, {
-			"status": 1,
-			"title": "\u6caa***",
-			"type": 4,
-			"reward": 1.5,
-			"start_date": "\u4eca\u65e5 23:59",
-			"tags": [1, 0, 0],
-			"id": 0,
-			"zs_reward": 0.0,
-			"icon": "",
-			"qty": 2500
-		}, {
-			"status": 1,
-			"title": "\u5238***",
-			"type": 4,
-			"reward": 1.35,
-			"start_date": "\u660e\u65e5 00:00",
-			"tags": [1, 0, 0],
-			"id": 0,
-			"zs_reward": 0.0,
-			"icon": "",
-			"qty": 500
-		}, {
-			"status": 1,
-			"title": "\u9f0e***",
-			"type": 4,
-			"reward": 1.35,
-			"start_date": "\u660e\u65e5 00:00",
-			"tags": [1, 0, 0],
-			"id": 0,
-			"zs_reward": 0.0,
-			"icon": "",
-			"qty": 500
-		}, {
-			"status": 1,
-			"title": "\u767e***",
-			"type": 4,
-			"reward": 1.5,
-			"start_date": "\u660e\u65e5 15:00",
-			"tags": [1, 0, 0],
-			"id": 0,
-			"zs_reward": 0.0,
-			"icon": "",
-			"qty": 5000
-		}, {
-			"link": "https://1.qianka.com/auth/signin/qianka?qk_uid=35562877&time=1462978542&sig=ace2811355be53732ff6e8ee4fc33d28&kv=3.0.2016040701&app_scheme=com.heijiaoyinyue.app&product_id=34&issue_no=A256",
-			"status": 1,
-			"title": "\u4e50\u89c6\u81ea\u884c\u8f66",
-			"issue_no": "A256",
-			"type": 100,
-			"id": 34,
-			"icon": "//duobao-image.b0.upaiyun.com/images/5989c12c4d8c09a18858f058655967de.png!120",
-			"percent": "72%"
-		}],
-		"ongoing": 0,
-		"fanxian_switcher": 1,
-		"fanxian": [{
-			"stock_residue": 3,
-			"market_price": "16.9000",
-			"discount": "1",
-			"id": 286,
-			"rebate_amount": "7.8000",
-			"pic": "http://assets.fx.qianka.com/Qkfanxian/product/146295655640413991510moblie.jpg@0o_0l_200w_90q.src",
-			"tags": "\u4e8f\u672c\u51b2\u91cf;\u77e5\u540d\u54c1\u724c;\u54c1\u8d28\u4fdd\u8bc1",
-			"mall_code": "TMALL",
-			"malls": [],
-			"title": "\u4e2d\u5c1a20\u4e2a\u84dd\u6ce1\u6ce1\u6d01\u5395\u5b9d",
-			"price": "8.8000",
-			"end_time": "2016-05-13 23:59:59"
-		}, {
-			"stock_residue": 4,
-			"market_price": "9.9000",
-			"discount": "1",
-			"id": 284,
-			"rebate_amount": "2.6000",
-			"pic": "http://assets.fx.qianka.com/Qkfanxian/product/1462956238527393171743moblie.jpg@0o_0l_200w_90q.src",
-			"tags": "\u6027\u611f;\u8d85\u8584;\u900f\u8089",
-			"mall_code": "TMALL",
-			"malls": [],
-			"title": "\u54c1\u5f69\u8fde\u88e4\u889c\u4e1d\u889c",
-			"price": "3.6000",
-			"end_time": "2016-05-13 23:59:59"
-		}, {
-			"stock_residue": 5,
-			"market_price": "98.0000",
-			"discount": "0.1",
-			"id": 282,
-			"rebate_amount": "12.8000",
-			"pic": "http://assets.fx.qianka.com/Qkfanxian/product/1462952967522971048336moblie.jpg@0o_0l_200w_90q.src",
-			"tags": "\u5347\u7ea7\u7248\u578b;\u4e09\u9489\u6263\u6b3e;\u9ad8\u5f39\u7626\u817f",
-			"mall_code": "TMALL",
-			"malls": [],
-			"title": "\u6b4c\u59ff\u7fbd\u9ad8\u8170\u9ed1\u8272\u6253\u5e95\u88e4",
-			"price": "13.8000",
-			"end_time": "2016-05-13 23:59:59"
-		}, {
-			"stock_residue": 68,
-			"market_price": "98.0000",
-			"discount": "1",
-			"id": 279,
-			"rebate_amount": "6.8000",
-			"pic": "http://assets.fx.qianka.com/Qkfanxian/product/146295703538590626299moblie.jpg@0o_0l_200w_90q.src",
-			"tags": "9\u53ea\u88c5;\u9ad8\u6863\u793c\u76d2;\u9001\u793c\u4f53\u9762",
-			"mall_code": "TMALL",
-			"malls": [],
-			"title": "\u4e09\u5168\u7cbd\u5b50\u73cd\u4eab\u793c\u76d2900g",
-			"price": "18.8000",
-			"end_time": "2016-05-13 23:59:59"
-		}, {
-			"stock_residue": 2,
-			"market_price": "26.8000",
-			"discount": "0.1",
-			"id": 270,
-			"rebate_amount": "6.9000",
-			"pic": "http://assets.fx.qianka.com/Qkfanxian/product/1462871865521482894365moblie.jpg@0o_0l_200w_90q.src",
-			"tags": "\u9897\u7c92\u9971\u6ee1;\u4e2a\u5934\u5747\u5300",
-			"mall_code": "TMALL",
-			"malls": [],
-			"title": "\u4f9d\u604b\u9ed1\u7c73500\u514b",
-			"price": "7.9000",
-			"end_time": "2016-05-12 23:59:59"
-		}],
-		"fanxian_link": "https://itunes.apple.com/cn/app/ka-gou-100yuan-yi-xia-bao/id1109287385?mt=8"
-	},
-	"over_loading": 0,
-	"messages": []
-}
-
 (function() {
     function t(t) {
         function e(e, n, i, o, a, s) {
@@ -1296,7 +1093,7 @@ function() {
     },
     i.template = function(t, e) {
         function n(t, e) {
-            var n = /\W/.test(t) ? new Function("obj", "var p=[],print=function(){p.push.apply(p,arguments);};with(obj){p.push('" + t.replace(/[\r\t\n]/g, " ").split("<%").join("	").replace(/((^|%>)[^\t]*)'/g, "$1\r").replace(/\t=(.*?)%>/g, "',$1,'").split("	").join("');").split("%>").join("p.push('").split("\r").join("\\'") + "');}return p.join('');") : i[t] = i[t];
+            var n = /\W/.test(t) ? new Function("obj", "var p=[],print=function(){p.push.apply(p,arguments);};with(obj){p.push('" + t.replace(/[\r\t\n]/g, " ").split("<%").join("  ").replace(/((^|%>)[^\t]*)'/g, "$1\r").replace(/\t=(.*?)%>/g, "',$1,'").split(" ").join("');").split("%>").join("p.push('").split("\r").join("\\'") + "');}return p.join('');") : i[t] = i[t];
             return e ? n(e) : n
         }
         if (t instanceof Function) return t(e);
@@ -4861,7 +4658,7 @@ function(t) {
                 }
             },
             n.parseBackgrounds = function(t) {
-                var e, n, i, o, a, s, r, c = " \r\n	",
+                var e, n, i, o, a, s, r, c = " \r\n ",
                 l = [],
                 d = 0,
                 u = 0,
@@ -7556,7 +7353,7 @@ function(t, e) {
         t.openAgreement = function() {
             t.giftPopup.close(),
             i(function() {
-                c.fromTemplateUrl("diadem/view-1.0.0-dev-452932d/agreement_modal.html", {
+                c.fromTemplateUrl("diadem/view-1.0.0-dev-76b4a98/agreement_modal.html", {
                     scope: t,
                     animation: "slide-in-up"
                 }).then(function(e) {
@@ -8772,7 +8569,7 @@ function(t, e) {
             })
         },
         t.fanliIntroImg = i.get("FANLI_INTRO"),
-        d.fromTemplateUrl("diadem/view-1.0.0-dev-452932d/double_go_fanli_modal.html", {
+        d.fromTemplateUrl("diadem/view-1.0.0-dev-76b4a98/double_go_fanli_modal.html", {
             scope: t,
             animation: "slide-in-up"
         }).then(function(e) {
@@ -8808,7 +8605,7 @@ function(t, e) {
                 })
             })
         },
-        d.fromTemplateUrl("diadem/view-1.0.0-dev-452932d/double_quota_tips_guide_modal.html", {
+        d.fromTemplateUrl("diadem/view-1.0.0-dev-76b4a98/double_quota_tips_guide_modal.html", {
             scope: t,
             animation: "slide-in-up"
         }).then(function(e) {
@@ -9192,7 +8989,7 @@ function(t, e) {
         t.closePrenticePopup = function() {
             t.shoutuPopup.close()
         },
-        r.fromTemplateUrl("diadem/view-1.0.0-dev-452932d/prentice_transcript_modal.html", {
+        r.fromTemplateUrl("diadem/view-1.0.0-dev-76b4a98/prentice_transcript_modal.html", {
             scope: t,
             animation: "slide-in-up"
         }).then(function(e) {
@@ -9216,19 +9013,19 @@ function(t, e) {
                 window.location.href = decodeURIComponent(i.url) + "?show_header=1"
             }
         },
-        r.fromTemplateUrl("diadem/view-1.0.0-dev-452932d/prentice_qrcode_modal.html", {
+        r.fromTemplateUrl("diadem/view-1.0.0-dev-76b4a98/prentice_qrcode_modal.html", {
             scope: t,
             animation: "slide-in-up"
         }).then(function(e) {
             t.prenticeQrcodeModal = e
         }),
-        r.fromTemplateUrl("diadem/view-1.0.0-dev-452932d/prentice_link_modal.html", {
+        r.fromTemplateUrl("diadem/view-1.0.0-dev-76b4a98/prentice_link_modal.html", {
             scope: t,
             animation: "slide-in-up"
         }).then(function(e) {
             t.prenticeLinkModal = e
         }),
-        r.fromTemplateUrl("diadem/view-1.0.0-dev-452932d/prentice_guide_modal.html", {
+        r.fromTemplateUrl("diadem/view-1.0.0-dev-76b4a98/prentice_guide_modal.html", {
             scope: t,
             animation: "slide-in-up"
         }).then(function(e) {
@@ -9633,7 +9430,7 @@ function(t) {
             width: "auto",
             height: p.getScreenHeight() - 114 + "px"
         }];
-        o.fromTemplateUrl("diadem/view-1.0.0-dev-452932d/gallery_modal.html", {
+        o.fromTemplateUrl("diadem/view-1.0.0-dev-76b4a98/gallery_modal.html", {
             scope: t,
             animation: "slide-in-up"
         }).then(function(t) {
@@ -9701,7 +9498,7 @@ function(t) {
             })
         };
         var I;
-        o.fromTemplateUrl("diadem/view-1.0.0-dev-452932d/other_integral_example_modal.html", {
+        o.fromTemplateUrl("diadem/view-1.0.0-dev-76b4a98/other_integral_example_modal.html", {
             scope: t,
             animation: "slide-in-up"
         }).then(function(t) {
@@ -9738,7 +9535,7 @@ function(t) {
         t.updateTaskDate = function(e) {
             t.task_date = c.dateFormat(e, "yyyy-MM-dd")
         },
-        n.fromTemplateUrl("diadem/view-1.0.0-dev-452932d/other_integral_example_modal.html", {
+        n.fromTemplateUrl("diadem/view-1.0.0-dev-76b4a98/other_integral_example_modal.html", {
             scope: t,
             animation: "slide-in-up"
         }).then(function(e) {
@@ -9766,7 +9563,7 @@ function(t) {
             })
         };
         var g;
-        n.fromTemplateUrl("diadem/view-1.0.0-dev-452932d/img_viewer.html", {
+        n.fromTemplateUrl("diadem/view-1.0.0-dev-76b4a98/img_viewer.html", {
             scope: t,
             animation: "slide-in-up"
         }).then(function(t) {
@@ -9862,7 +9659,7 @@ function(t) {
 }),
 define("qk.app", ["templates/qk", "controller/dashboard", "controller/user", "controller/task", "controller/withdraw", "controller/novice", "controller/prentice", "controller/other"],
 function(t) {
-    var e = "diadem/view-1.0.0-dev-452932d/",
+    var e = "diadem/view-1.0.0-dev-76b4a98/",
     n = angular.module("qkApp", ["qkControllers"]);
     return n.config(["$stateProvider", "$urlRouterProvider", "$locationProvider", "$httpProvider", "$ionicConfigProvider", "$compileProvider", "$sceDelegateProvider",
     function(n, i, o, a, s, r, c) {
@@ -10125,10 +9922,10 @@ paths = {
     css: libBase + "require/1.0.1/require.min",
     c2h: libBase + "c2h/0.5.5/c2h.min"
 },
-styleSheets = ["css!http://qkcdn.com/diadem/lib/ionic/0.3.0/css/ionic.min.css", "css!http://qkcdn.com/diadem/css/qk-1.0.0-dev-452932d.css"],
+styleSheets = ["css!http://qkcdn.com/diadem/lib/ionic/0.3.0/css/ionic.min.css", "css!http://qkcdn.com/diadem/css/qk-1.0.0-dev-76b4a98.css"],
 ua = window.navigator.userAgent,
 re = /^.*appLabel\/(.*)$/;
-re.test(ua) && styleSheets.push("css!http://qkcdn.com/diadem/css/qk-wv-1.0.0-dev-452932d.css"),
+re.test(ua) && styleSheets.push("css!http://qkcdn.com/diadem/css/qk-wv-1.0.0-dev-76b4a98.css"),
 require.config({
     baseUrl: "diadem/js",
     paths: paths,
@@ -10159,6 +9956,16 @@ require.config({
 }),
 require(["ionic", "underscore", "chart", "c2h", "qk.app", "common/util"],
 function() {
+/*<qk-app-context
+        data-qk-endpoint="http://127.0.0.1:8888"
+        data-ws-endpoint="http://qianka.com"
+        data-assets-cdn="http://assets.qkcdn.com/images"
+        data-qk-scheme="com.heijiaoyinyue.app"
+        data-default-route="/welcome"
+        data-no-key-available="0"
+        data-qk-version="76b4a98">
+</qk-app-context>*/
+
     var t = document.getElementsByTagName("qk-app-context"),
     e = t[0].attributes;
     try {

@@ -3,6 +3,8 @@
  */
 
 "use strict";
+const http = require('http');
+const querystring = require('querystring');
 const req = require('../libs/req');
 
 function keepAppOnline(){
@@ -64,10 +66,41 @@ function appList(){
 //};
 //return this.post(i)
 
-function clickTask(){
+/**
+ *
+ * @param tid  task id
+ */
+function clickTask(tid){
     let opt = {
+        hostname: 'qianka.com',
+        path: '/services/subtasks.start',
+        method: "POST",
+        headers: {
+            "X-QK-TIME": 1463069649,
+            "X-QK-SIGN": "7D24B3B6E430F9A6C14CEA6811F817AD",
+            "X-QK-SCHEME": "com.heijiaoyinyue.app",
+            "X-QK-API-KEY": "c26007f41f472932454ea80deabd612c",
+            "X-QK-APPV": "iPhone8,1|1280.250000|com.heijiaoyinyue.app|3.0.2016040701",
+            "X-QK-AUTH": "4013E176-3F4D-4864-9B1A-2B9BEBABF0AD|b9b1ad8f-feb4-495f-bf48-0b1b1d8ff57c|7394422535187494",
+            "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13E238 Safari/601.1"
+        }
+    };
+    let data = {
+        task_id: tid
+    };
 
-    }
+    let re = http.request(opt, function(res){
+        let result = '';
+        res.on('data', function(chunk){
+            result += chunk;
+        });
+        res.on('end', function() {
+            console.error('result: ', result);
+        });
+    });
+    re.write(querystring.stringify(data));
+    re.end();
 }
+clickTask(135755)
 
-appList();
+//appList();
