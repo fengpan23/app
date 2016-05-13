@@ -84,9 +84,9 @@ function applist(timeout, complete){
         }
     };
     req.reget(opt, timeout, 'applist').on('applist', function(lists){
-        console.log('applist.length : ', lists.length);
+        //console.log('applist.length : ', lists.length);
         lists.forEach(function (item) {
-            console.log('name: ', item.search_word);
+            //console.log('name: ', item.search_word);
             if(item.order_status_disp > 0){
                 //TODO: record time
                 console.log('share app time: ', new Date());
@@ -140,7 +140,7 @@ function checkOnline(timeout, cb){
         url: 'http://i.appshike.com/itry/xbStatus?token=C723BD5CD22203560E1A011CFEE968C1&t=0.35692404257133603'
     };
     req.reget(opt, timeout, 'check').on('check', function (data) {
-        console.log('check online : ', data);
+        console.log(new Date(), ' check online : ', data);
         if(!data){
             keepOnline()
         }

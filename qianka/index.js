@@ -101,6 +101,6 @@ function clickTask(tid){
     re.write(querystring.stringify(data));
     re.end();
 }
-clickTask(135755)
+//clickTask(135755);
 
-//appList();
+appList();
