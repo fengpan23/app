@@ -5,7 +5,15 @@
 "use strict";
 const http = require('http');
 const querystring = require('querystring');
+const moment = require('moment');
+const _ = require('underscore');
 const req = require('../libs/req');
+const common = require('../libs/common');
+
+let TIME = 1463290361;
+let SIGN = 'FC6EFC1760E937CFF15A64E257C7977B';
+
+let tasks = new Map();
 
 function keepAppOnline(){
     let opt = {
@@ -16,18 +24,13 @@ function keepAppOnline(){
     }
 
 }
-/**
- * 	GET /services/subtasks.getList
- * change           1,   X-QK-TIME	1463068647
- *                  2,   X-QK-SIGN	BB9E65B431826B30628445AF28D476FE
- */
 
-function appList(){
+function appList(inter){
     let opt = {
         url: "http://qianka.com/services/subtasks.getList",
         headers: {
-            "X-QK-TIME": 1463069649,
-            "X-QK-SIGN": "7D24B3B6E430F9A6C14CEA6811F817AD",
+            "X-QK-TIME": TIME,
+            "X-QK-SIGN": SIGN,
             "X-QK-SCHEME": "com.heijiaoyinyue.app",
             "X-QK-API-KEY": "c26007f41f472932454ea80deabd612c",
             "X-QK-APPV": "iPhone8,1|1280.250000|com.heijiaoyinyue.app|3.0.2016040701",
@@ -36,16 +39,42 @@ function appList(){
         }
     };
 
-    req.reget(opt, null, 'qkList').on('qkList', function (result) {
+    req.reget(opt, inter, 'qkList').on('qkList', function (result) {
         if(result.payload && result.payload.subtasks){
+            console.log("tasks size : ", tasks.size);
+
             result.payload.subtasks.forEach(function (task) {
+
                 if(task.qty > 0){          //  有量
-                    console.log('task: ', task);
-                    if(task.status === 3){      //可抢
+                    if(1 == task.type && (1 == task.status && task.qty > 0 || 2 == task.status)){      //可抢  status（1: 未开始， 3: 已做过）
+                        console.log('可抢： ', task);
                         //TODO： click
+                        clickTask(task.id);
                     }
 
-                    if(task.status === 5){      //已经做过的任务
+                    if(4 == task.type){     //未开始
+                        //console.log(task.qty, ' task: ', task.start_date);
+                        let m = moment({hour: +task.start_date.substr(-5, 2), minute: +task.start_date.substr(-2, 2)});;
+                        if(task.start_date.indexOf('明日') > -1){     //明日
+                            m.add(1, 'd');
+                        }
+
+                        if(!_.find(tasks.keys(), function(num){return num === m.valueOf();})){
+                            let interval = m - new Date() - 200;
+                            //console.log('还有分钟: ', parseInt(interval / (60 * 1000)));
+                            if(interval > 5 * 1000){
+                                let near = common.near(tasks.keys(), m.valueOf(), 1000);
+                                near && clearTimeout(tasks.get(near));
+
+                                tasks.set(m.valueOf(), setTimeout(function () {
+                                    appList(1000);
+                                }, interval));
+                            }
+                        }
+                    }
+
+                    if(1 == task.type && (0 == task.status || 3 == task.status)){      //已经做过的任务
+                        //console.log('已做过： ', task.title);
                         //TODO: user others id do it
                     }
                 }
@@ -56,15 +85,6 @@ function appList(){
     });
 }
 
-//var n = {
-//    task_id: t
-//};
-//e && (n.card_type = e);
-//var i = {
-//    uri: window.QK_ENDPOINT + "services/subtasks.start",
-//    data: n
-//};
-//return this.post(i)
 
 /**
  *
@@ -76,8 +96,8 @@ function clickTask(tid){
         path: '/services/subtasks.start',
         method: "POST",
         headers: {
-            "X-QK-TIME": 1463069649,
-            "X-QK-SIGN": "7D24B3B6E430F9A6C14CEA6811F817AD",
+            "X-QK-TIME": TIME,
+            "X-QK-SIGN": SIGN,
             "X-QK-SCHEME": "com.heijiaoyinyue.app",
             "X-QK-API-KEY": "c26007f41f472932454ea80deabd612c",
             "X-QK-APPV": "iPhone8,1|1280.250000|com.heijiaoyinyue.app|3.0.2016040701",
@@ -88,7 +108,7 @@ function clickTask(tid){
     let data = {
         task_id: tid
     };
-
+    console.log('click id: ', tid);
     let re = http.request(opt, function(res){
         let result = '';
         res.on('data', function(chunk){
@@ -103,4 +123,4 @@ function clickTask(tid){
 }
 //clickTask(135755);
 
-appList();
+appList(5000);

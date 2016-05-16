@@ -58,11 +58,32 @@ function clickRecord(appid, oid){
         });
         res.on('end', function() {
             //result === -1  被抢光
-            console.error('result: ', result);
+            console.error('result: ', result, typeof result);
+            if(~result){
+                copyKeyword({appid: appid, oid: oid, uid: user_id});
+            }
         });
     });
     re.write(querystring.stringify(data));
     re.end();
+}
+
+/**
+ * 复制关键字
+ * @param opt
+ */
+function copyKeyword(opt){
+    let options = {
+        url: "http://i.appshike.com/shike/copy_keyword?appid="+ opt.appid +"&user_id="+ opt.uid +"&order_Id="+ opt.oid +"&t=" + +new Date() + 10000,
+        headers: {
+            "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13E238 Safari/601.1",
+            "Referer": "http://i.appshike.com/shike/appDetails/372353614/74807/FCDA63C88010782F5867CB8E79CD29FE?ds=r0",
+            "Cookie": 'IORI="aZIInp/V1n511KTgIkh63mmFNWXmofqW9gqnfSgIPgzkG40ZbPZkpGtgUTsS8Pimm0WWwyKGL0D1tnjPh8jX/oa9z/vdhPDN64uc9CbOZ5k="; JSESSIONID=2AC1FB9BD2FF803099FDFAA7972B08DE; OD=aZIInp/V1n511KTgIkh63mmFNWXmofqW9gqnfSgIPgxS36fT4wtomhJfcU/fpId7; OIL=tV5rpN%2B_Wr1rcJXMQpaiiZ5uiAhO85JaB3FinHpVxheO6DGVKS5doLy8NYn%2B6Jy22siDSCOI2HCLscFmK0T_Eg%3D%3D; aliyungf_tc=AQAAAE0fa2EmCA8AyPOUPYwLBb0fpNzN'
+        }
+    };
+    req.reget(options, null, 'copyKeyword').on('copyKeyword', function (res) {
+        console.log('copy keyword result: ', res);
+    });
 }
 
 /**
@@ -137,10 +158,10 @@ function keepOnline(cb){
  */
 function checkOnline(timeout, cb){
     let opt = {
-        url: 'http://i.appshike.com/itry/xbStatus?token=C723BD5CD22203560E1A011CFEE968C1&t=0.35692404257133603'
+        url: 'http://i.appshike.com/itry/xbStatus?token=C723BD5CD22203560E1A011CFEE968C1&t=' + Math.random()
     };
     req.reget(opt, timeout, 'check').on('check', function (data) {
-        console.log(new Date(), ' check online : ', data);
+        console.log(new Date().toLocaleTimeString(), ' check online : ', data);
         if(!data){
             keepOnline()
         }
@@ -159,7 +180,7 @@ async.series([
         cb();
     }
 ], function (err, result) {
-});
+})
 
 
 // TODO

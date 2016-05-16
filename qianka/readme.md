@@ -9956,7 +9956,7 @@ require.config({
 }),
 require(["ionic", "underscore", "chart", "c2h", "qk.app", "common/util"],
 function() {
-/*<qk-app-context
+"<qk-app-context
         data-qk-endpoint="http://127.0.0.1:8888"
         data-ws-endpoint="http://qianka.com"
         data-assets-cdn="http://assets.qkcdn.com/images"
@@ -9964,7 +9964,7 @@ function() {
         data-default-route="/welcome"
         data-no-key-available="0"
         data-qk-version="76b4a98">
-</qk-app-context>*/
+</qk-app-context>
 
     var t = document.getElementsByTagName("qk-app-context"),
     e = t[0].attributes;
