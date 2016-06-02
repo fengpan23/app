@@ -31,7 +31,7 @@ class Req{
                     }catch(e){console.error('error: ', e, ' result: ', result)}
                     me.emit(name, res);
                 }
-            });
+            }).on('error', (e)=>{console.error(e)});
         }
         carry();
         interval && setInterval(carry, interval);

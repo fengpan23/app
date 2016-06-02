@@ -7,6 +7,8 @@ const async = require('async');
 const user_id = 21793284;
 const key = 'FCDA63C88010782F5867CB8E79CD29FE';
 
+let doing = null;
+
 //加载试玩网页
 //var options = {
 //    url: 'http://i.appshike.com/shike/appList?t=1462890071352',
@@ -58,8 +60,9 @@ function clickRecord(appid, oid){
         });
         res.on('end', function() {
             //result === -1  被抢光
-            console.error('result: ', result, typeof result);
-            if(~result){
+            console.error('result: ', result);
+                if(result.length < 5 && ~result){
+                doing = appid;
                 copyKeyword({appid: appid, oid: oid, uid: user_id});
             }
         });
@@ -108,7 +111,7 @@ function applist(timeout, complete){
         //console.log('applist.length : ', lists.length);
         lists.forEach(function (item) {
             //console.log('name: ', item.search_word);
-            if(item.order_status_disp > 0){
+            if(item.order_status_disp > 0 && !doing){
                 //TODO: record time
                 console.log('share app time: ', new Date());
                 clickRecord(item.appid, item.order_id);
@@ -147,7 +150,7 @@ function keepOnline(cb){
         }
     };
     req.reget(opt, null, 'online').once('online', function (data) {
-        console.log('小兵启动 status: ', data);
+        console.log('start status: ', data);
         cb && cb();
         cb = null;
     });
@@ -173,7 +176,7 @@ function checkOnline(timeout, cb){
 async.series([
     keepOnline,
     function (cb) {
-        checkOnline(10 * 1000, cb);
+        checkOnline(15 * 1000, cb);
     },
     function (cb) {
         applist(1 * 1000);

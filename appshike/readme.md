@@ -50,7 +50,7 @@ var itrycom="i.appshike.com";
 var shokey_param_key = 'itry.shokey.param';
 var download_xb_by_safari =true;
 var down_xb_url = "http://yysk-itry.58.com/s/ndown.html";
-var down_xb_url_by_safari = "itms-services://?action=download-manifest&url=https://down.appshike.com/plist/";
+var down_xb_url_by_safari = "itms-services://?action=download-manifest&url=https://down.appshike.com/plist/60_1.plist";
 var download_app_by_safari =true;
 var down_app_url="http://yysk-itry.58.com/s/itunes.html?a=###";
 var down_app_url_by_safari = "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/search?clientApplication=Software&e=true&media=software&term=";
@@ -207,7 +207,7 @@ function download_xb(oid_md5,is_safari){
     //记录下载时IP版本号及MD5
     $.getJSON("/itry/log_download_xb",data,function(back){
         if(back.rtn>0){
-        	var d_url = down_xb_url_by_safari+back.binding+".plist";
+        	var d_url = down_xb_url_by_safari60_1.plist";
     		window.location.href= d_url;
         }else{
             alert("请重新打开");
