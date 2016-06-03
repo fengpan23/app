@@ -50,24 +50,40 @@
 const request = require('request');
 const _ = require('underscore');
 
+let result = [];
 function abc() {
-    let abbr = '';  //cawrdyfls
-    for (let i = 0; i < 9; i++) {
-        abbr += String.fromCharCode(_.random(97, 122));
+    let abbr = 'hhhrdyfls';  //cawrdyfls
+    let openid = 'oePyxtx';    //oePyxtxzOAIbc6Kvkk5_PwJ-rFos //oePyxtzTHa4mfuG13u5r_9Q7xwuw
+    for (let i = 0; i < 21; i++) {
+        switch (_.random(1, 3)){
+            case 1:
+                openid += String.fromCharCode(_.random(65, 90));
+                break;
+            case 2:
+                openid += String.fromCharCode(_.random(97, 122));
+                break;
+            case 3:
+                openid += String.fromCharCode(_.random(48, 57));
+                break;
+        }
     }
     request({
-        url: "http://wx.hrjkgw.com/drugstore/mactivity/vote/updateVote.shtml?picid=699&abbr=" + abbr + "&openid=oePyxtxzOAIbc6Kvkk5_PwJ-rFos&activityid=1",
+        url: "http://wx.hrjkgw.com/drugstore/mactivity/vote/updateVote.shtml?picid=699&abbr=" + abbr + "&openid="+ openid +"&activityid=1",
         headers: {
             "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13E238 Safari/601.1",
             "Referer": "http://i.appshike.com/shike/appDetails/372353614/74807/FCDA63C88010782F5867CB8E79CD29FE?ds=r0",
             "Cookie": 'IORI="aZIInp/V1n511KTgIkh63mmFNWXmofqW9gqnfSgIPgzkG40ZbPZkpGtgUTsS8Pimm0WWwyKGL0D1tnjPh8jX/oa9z/vdhPDN64uc9CbOZ5k="; JSESSIONID=2AC1FB9BD2FF803099FDFAA7972B08DE; OD=aZIInp/V1n511KTgIkh63mmFNWXmofqW9gqnfSgIPgxS36fT4wtomhJfcU/fpId7; OIL=tV5rpN%2B_Wr1rcJXMQpaiiZ5uiAhO85JaB3FinHpVxheO6DGVKS5doLy8NYn%2B6Jy22siDSCOI2HCLscFmK0T_Eg%3D%3D; aliyungf_tc=AQAAAE0fa2EmCA8AyPOUPYwLBb0fpNzN'
         }
     }, (a, b, c)=> {
-        c = JSON.parse(c);
+        try{
+            c = JSON.parse(c);
+        }catch(e){console.error(e)}
         if (c && c.data == 1) {
-            console.log(abbr);
-            recall()
+            result.push(openid);
+            console.log(openid);
         }
+        recall(_.random(1, 10) * 1000);
+
     }).on('data', (data)=> {
 
     }).on('end', (a, b, c)=> {
@@ -77,8 +93,10 @@ function abc() {
     });
 }
 
-function recall() {
-    setTimeout(abc, _.random(1, 10) * 1000 * 60)
+let tt = 0;
+function recall(t) {
+    if(tt > 10 * 60 * 1000){tt =0}
+    tt += t;
+    result.length < 500 && setTimeout(abc, tt);
 }
-
 abc();
